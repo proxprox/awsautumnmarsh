@@ -1,0 +1,16 @@
+<font color="white">
+<body style = "background-color:#242D43;text-align:Center">
+<h1><a href="/" style="color:#FFFFFF">Items</a></h1>
+<font size="4">
+{% for item in items|dictsort:"name.lower" %}
+        <font size = '6'>
+<p style="text-decoration:underline">{{ item.name }}</p>
+        </font>
+<p style="margin-left: 40px">{{ item.description }}</p>
+
+{%endfor%}
+
+
+</font>
+</font>
+</body>

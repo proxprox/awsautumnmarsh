@@ -1,0 +1,16 @@
+<font color="white">
+<body style = "background-color:#242D43;text-align:Center">
+<h1><a href="/" style="color:#FFFFFF">Recaps</a></h1>
+<font size="4">
+{% for recap in recaps|dictsort:"date.lower" %}
+        <font size = '6'>
+<p style="text-decoration:underline">{{ recap.date }}</p>
+        </font>
+<p style="margin-left: 40px">{{ recap.description }}</p>
+
+{%endfor%}
+
+
+</font>
+</font>
+</body>

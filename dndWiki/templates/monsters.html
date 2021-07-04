@@ -1,0 +1,23 @@
+<font color="white">
+<body style = "background-color:#242D43;text-align:Center">
+<h1><a href="/" style="color:#FFFFFF">Monsters</a></h1>
+<form action="/enemySearch/" method="GET" >
+        Search for an Enemy: <input name="enemyName">
+        <input type="submit">
+</form>
+<font size="4">
+{% for monster in Monsters|dictsort:"type.lower" %}
+        <font size = '7'>
+        <p style="text-decoration:underline">{{ monster.name }}</p>
+        </font>
+        <font size = '6'>
+        <p style="">TYPE: {{monster.type }}</p>
+        </font>
+        <p> DESCRIPTION: {{ monster.description }}</p>
+
+{%endfor%}
+
+
+</font>
+</font>
+</body>
